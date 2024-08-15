@@ -144,7 +144,7 @@ Este projeto é um esboço para um projeto DevSeCops, com foco na implementaçã
 ## Estrutura do projeto
 
 A pasta do projeto contém a seguinte estrutura:
-
+```
 Project_folder/
 │
 ├── config.py
@@ -180,7 +180,7 @@ Project_folder/
 │ ├── Reserve.html
 │ ├── reset_password.html
 │ └── User_Reservations.html
-
+```
 
 ## Descrições de arquivo
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel a Reservation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Cancel a Reservation</h2>
+        <form method="POST" action="{{ url_for('main.cancel_reservation') }}">
+            <label for="reservation">Select Reservation:</label>
+            <select id="reservation" name="reservation_id" required>
+                {% for reservation in reservations %}
+                    <option value="{{ reservation.id }}">{{ reservation.room.name }} - {{ reservation.date }} at {{ reservation.time }}</option>
+                {% endfor %}
+            </select>
+            
+            <button type="submit" class="btn btn-danger">Cancel Reservation</button>
+        </form>
+    </div>
+</body>
+</html>

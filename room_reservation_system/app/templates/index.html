@@ -1,0 +1,10 @@
+{% extends "main.base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to the Room Reservation System</h1>
+    <a href="{{ url_for('main.explore') }}" class="btn">Explore</a>
+</div>
+{% endblock %}

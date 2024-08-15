@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.login') }}">Login</a>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </nav>
+    </header>
+    <div class="explore-container">
+        <h1 class="explore-title">Welcome to Our Institution</h1>
+        <div class="explore-content">
+            <p>Our institution offers a range of rooms that can be reserved for various events and meetings. You can easily check availability and make reservations using our platform.</p>
+            <p>To make a reservation, navigate to the reservation page where you can select the room, date, and time that fits your needs. Our system ensures that the rooms are available and confirms your booking immediately.</p>
+            <p>Explore more features and get to know how our reservation system can help streamline your event planning.</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('main.logout') }}">Logout</a>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Admin Panel</h2>
+        
+        <!-- Reservation List -->
+        <h3>Reservation List</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Room</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reservation, user, room in reservations %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ reservation.date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ reservation.time.strftime('%H:%M') }}</td>
+                    <td>{{ room.name }}</td>
+                    <td>
+                        <form method="POST" action="{{ url_for('main.cancel_reservation') }}">
+                            <input type="hidden" name="reservation_id" value="{{ reservation.id }}">
+                            <button type="submit" class="btn btn-danger">Cancel</button>
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5">No reservations found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

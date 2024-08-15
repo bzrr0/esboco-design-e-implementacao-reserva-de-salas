@@ -1,0 +1,222 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #000000;
+}
+
+/* Header */
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #007bff;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: -8px;
+    left: 3px;
+    z-index: 10;
+    /* Align with header elements */
+    height: 35px; /* Adjust height to match header items */
+    line-height: 25px; /* Adjust line height to center text vertically */
+}
+
+.dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* Container */
+.container, .explore-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    /* Ensure container background color adapts to dark mode */
+    border: 1px solid #ddd;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+.container.dark-mode {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #fff;
+}
+
+.explore-container {
+    background-color: #ffffff;
+}
+
+.explore-container.dark-mode {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #fff;
+}
+
+.explore-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.explore-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="time"], select {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input.dark-mode, select.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+/* Input adjustments for login page */
+input[type="text"].login, input[type="password"].login {
+    max-width: 200px; /* Shorter width for login inputs */
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center; /* Center content in table */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container, .explore-container {
+        padding: 15px;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        font-size: 18px;
+    }
+
+    button, .btn {
+        padding: 15px;
+        font-size: 20px;
+    }
+}

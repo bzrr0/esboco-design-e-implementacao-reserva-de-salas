@@ -9,7 +9,7 @@ This project is a sketch for a DevSecOps project, focusing on implementing a sec
 ## Project Structure
 
 The project folder contains the following structure:
-
+```
 project_folder/
 │
 ├── config.py
@@ -45,7 +45,7 @@ project_folder/
 │ ├── reserve.html
 │ ├── reset_password.html
 │ └── user_reservations.html
-
+```
 
 ## File Descriptions
 

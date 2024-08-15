@@ -221,7 +221,7 @@ Pasta#`App/modelos`
 - ** Reset_password.html **: página para redefinir senhas de usuário.
 - ** user_reservations.html **: página mostrando as próprias reservas do usuário.
 
-## Configuração e configuração
+## Configuração e Inicialização
 
 ### Geração automatizada de projeto
 

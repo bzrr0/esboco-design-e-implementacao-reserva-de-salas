@@ -25,7 +25,7 @@ project_folder/
 │ ├── forms.py
 │ ├── models.py
 │ └── routes.py
-│ │
+│
 │ ├── static/
 │ │ ├── css/
 │ │ │ └── styles.css
